@@ -21,7 +21,12 @@
     <section class="footer__recherche"><?php get_search_form(); ?></section>
     <section class="footer__auteur">Auteur : Eddy Martin</section>
 </div>
+
 </footer>
+<div class="boite__modale" style="background-color:<?= get_theme_mod("background_body");?>;">
+            <p class="boite__modale__fermee">[X]</p>
+    <p class="boite__modale__texte" style="font-family:<?= get_theme_mod("font")?>; color:<?= get_theme_mod("font_color");?>;">--ceci est un texte pour tester la boite modale--</p>
+</div>
 <?php wp_footer() ?>
 </body>
 </html>

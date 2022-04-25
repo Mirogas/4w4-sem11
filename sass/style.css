@@ -561,6 +561,10 @@ COMPOSANTES
   }
 }
 
+.formation__cours__invisible {
+  display: none;
+}
+
 .cours__titre {
   font-size: 1.5rem;
   color: #ebcac1;
@@ -994,6 +998,15 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   left: 25%;
   border: black solid 2px;
   background-color: yellowgreen;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.boite__modale--ouvrir {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 /* ---------------------------------------------------------
@@ -1133,19 +1146,14 @@ LAYOUT
   gap: 10px;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-      grid-template-areas: "sidebar"
- "header"
- "main"
- "footer";
+      grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 @media screen and (min-width: 800px) {
   .site {
     -ms-grid-columns: auto 300px;
         grid-template-columns: auto 300px;
-        grid-template-areas: "header header"
- " main sidebar"
- "footer footer";
+        grid-template-areas: "header header" " main sidebar" "footer footer";
   }
   .home {
     display: -ms-grid;
@@ -1153,10 +1161,7 @@ LAYOUT
     gap: 0px;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
-        grid-template-areas: "sidebar"
- "header"
- "main"
- "footer";
+        grid-template-areas: "sidebar" "header" "main" "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */

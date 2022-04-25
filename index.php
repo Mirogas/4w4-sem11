@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<main class="site__main">
+<main class="site__main" style="font-family:<?= get_theme_mod("font")?>">
     <section class="formation">
         <h2 class="formation__titre">Liste des cours du programme TIM</h2>
         <div class="formation__liste">
