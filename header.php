@@ -16,7 +16,7 @@
 
     <style>
         .home::after{
-            background-color: <?php get_theme_mod("background_body");?> ;
+            background-color: <?= get_theme_mod("clipPath_color");?> ;
         }
     </style>
 </head>

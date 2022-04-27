@@ -68,7 +68,7 @@ add_action("customize_register", function(WP_Customize_Manager $manager){
     
     // changer font-color
     $manager->add_section("modifier_font_color",[
-        "title"=>"modifier lla couleur du texte"
+        "title"=>"modifier la couleur du texte"
     ]);
     $manager->add_setting("font_color", [
         "default"=>"#ffffff",
@@ -91,6 +91,19 @@ add_action("customize_register", function(WP_Customize_Manager $manager){
         "setting"=>"font",
         "label"=>"Police de caractères"
     ]);
+
+     // changer clipPath
+     $manager->add_section("modifier_clipPath_color",[
+        "title"=>"modifier la couleur du clipPath"
+    ]);
+    $manager->add_setting("clipPath_color", [
+        "default"=>"#ffffff",
+        "sanitize_callback"=>"sanitize_hex_color"
+    ]);
+    $manager->add_control(new WP_Customize_Color_Control($manager, "clipPath_color",[
+        "section"=>"modifier_clipPath_color",
+        "label"=>"Couleur du clipPath"
+    ]));
 
 });
 
